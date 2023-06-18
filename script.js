@@ -3,7 +3,7 @@ const booksContainer = document.querySelector(".books-container");
 const addBookButton = document.getElementById("add-book-button");
 const addBookForm = document.querySelector(".add-book-form");
 const addBookButtonSubmit = document.getElementById("add-book-button-2");
-
+let isOpen = false;
 
 
 
@@ -15,7 +15,6 @@ function book(title, author, pages) {
 }
 
 function toggleInputForm() {
-    let isOpen = false;
     addBookButton.addEventListener('click', (e)=>{
         if (isOpen == false){
             addBookForm.style.display = "flex";
@@ -44,7 +43,7 @@ function addBookToLibrary(){
     
     const author = document.createElement("p");
     author.classList.add("book-author");
-    author.textContent = bookObject.author;
+    author.textContent = "by " + bookObject.author;
     
     const pages = document.createElement("p");
     pages.classList.add("book-pages");
@@ -59,11 +58,16 @@ function addBookToLibrary(){
         
     card.append(title, author, pages, removeButtonContainer);
     booksContainer.append(card);
+    titleInput.value = "";
+    authorInput.value = "";
+    pagesInput.value = "";
 }
 
 
 addBookButtonSubmit.addEventListener('click', (e)=>{
     e.preventDefault();
+    addBookForm.style.display = "none";
+    isOpen = false;
     addBookToLibrary();
 })
 toggleInputForm();
