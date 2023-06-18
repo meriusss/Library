@@ -213,4 +213,11 @@ table {
     color: white;
     font-size: 2vh;
     font-weight: 100;
+    transition: 1s;
+}
+
+#remove-book-button:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+    transition: 1s;
 }
