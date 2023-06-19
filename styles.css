@@ -58,13 +58,13 @@ table {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-size: 5vh;
+    font-size: 50px;
     padding: 0 10%;
 }
 
 #dark-mode {
     width: auto;
-    height: 5vh;
+    height: 50px;
 }
 
 
@@ -87,12 +87,12 @@ table {
 }
 
 #add-book-button {
-    height: 5vh;
+    height: 50px;
     border-radius: 10px;
     border: none;
     background-color: #4d6b53;
     color: white;
-    font-size: 3vh;
+    font-size: 30px;
     font-weight: 100;
     transition: 1s;
 }
@@ -107,8 +107,8 @@ table {
 .add-book-form {
     display: none;
     flex-direction: column;
-    gap: 1vh;
-    margin-top: 1vh;
+    gap: 10px;
+    margin-top: 10px;
     border: 1px solid black;
     background-color: white;
     border-radius: 25px;
@@ -127,7 +127,7 @@ table {
 .add-book-form input {
     border-radius: 20px;
     padding: 0 5%;
-    height: 2.5vh;
+    height: 25px;
 }
 
 #add-book-button-2 {
@@ -137,7 +137,7 @@ table {
     border: none;
     background-color: #4d6b53;
     color: white;
-    font-size: 2.5vh;
+    font-size: 25px;
     font-weight: 100;
     transition: 1s;
 }
@@ -191,27 +191,27 @@ table {
 }
 
 .book-title {
-    font-size: 3vh;
+    font-size: 30px;
     font-style: italic;
     font-weight: 300;
 }
 
 .book-author {
-    font-size: 2.5vh;
+    font-size: 25px;
 }
 
 .book-pages {
-    font-size: 2vh;
+    font-size: 20px;
 }
 
 
 #remove-book-button {
-    height: 5vh;
+    height: 50px;
     border-radius: 10px;
     border: none;
     background-color: #6b534d;
     color: white;
-    font-size: 2vh;
+    font-size: 20px;
     font-weight: 100;
     transition: 1s;
 }
