@@ -9,11 +9,12 @@ let id = 0;
 
 
 
-function book(title, author, pages, id) {
+function book(title, author, pages, id, isRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.id = id;
+    this.isRead = isRead;
 }
 
 function toggleInputForm() {
@@ -59,7 +60,17 @@ function updateHtml(){
         const pages = document.createElement("p");
         pages.classList.add("book-pages");
         pages.textContent = element.pages + " pages";
-        
+
+        const isReadContainer = document.createElement("div");
+        isReadContainer.style.display = "flex";
+        isReadContainer.style.flexDirection = "row";
+        isReadContainer.style.alignItems = "center";
+        const isReadText = document.createElement("p");
+        isReadText.textContent = "Read status";
+        const isRead = document.createElement("input");
+        isRead.type = "checkbox";
+        isReadContainer.append(isReadText,isRead);
+   
         const removeButtonContainer = document.createElement("div");
         removeButtonContainer.classList.add("remove-button-container");
         const removeButton = document.createElement("button");
@@ -75,7 +86,7 @@ function updateHtml(){
         })
         removeButtonContainer.append(removeButton);
             
-        card.append(title, author, pages, removeButtonContainer);
+        card.append(title, author, pages, isReadContainer, removeButtonContainer);
         booksContainer.append(card);  
     });
     
