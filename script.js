@@ -7,15 +7,16 @@ let isOpen = false;
 let id = 0;
 
 
-
-
-function book(title, author, pages, id, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.id = id;
-    this.isRead = isRead;
+class Book {
+    constructor(title, author, pages, id, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.id = id;
+        this.isRead = isRead;
+    }
 }
+
 
 function toggleInputForm() {
     addBookButton.addEventListener('click', (e)=>{
@@ -35,7 +36,7 @@ function addBookToLibrary(){
     const authorInput = document.getElementById("author-input");
     const pagesInput = document.getElementById("pages-input");
 
-    let bookObject = new book(titleInput.value, authorInput.value, pagesInput.value, id);
+    let bookObject = new Book(titleInput.value, authorInput.value, pagesInput.value, id);
     library.push(bookObject);
     titleInput.value = "";
     authorInput.value = "";
